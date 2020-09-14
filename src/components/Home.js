@@ -11,8 +11,10 @@ function Home() {
           alt="Home Background"
           className="home__image"
         />
+
         <div className="home__row">
           <Product
+            id="12345"
             title="Mi Notebook"
             rating={2}
             price={99.9}
@@ -21,6 +23,7 @@ function Home() {
             }
           />
           <Product
+            id="12349"
             title="Mi Notebook"
             rating={2}
             price={99.9}
@@ -32,6 +35,7 @@ function Home() {
 
         <div className="home__row">
           <Product
+            id="12395"
             title="Mi Notebook"
             rating={2}
             price={99.9}
@@ -40,6 +44,7 @@ function Home() {
             }
           />
           <Product
+            id="12945"
             title="Mi Notebook"
             rating={2}
             price={99.9}
@@ -48,6 +53,7 @@ function Home() {
             }
           />
           <Product
+            id="12445"
             title="Mi Notebook"
             rating={2}
             price={99.9}
@@ -59,6 +65,7 @@ function Home() {
 
         <div className="home__row">
           <Product
+            id="19345"
             title="Mi Notebook"
             rating={2}
             price={99.9}
