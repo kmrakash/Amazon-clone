@@ -2,11 +2,22 @@ import React from "react";
 import "./Checkout.css";
 import Subtotal from "./Subtotal";
 import { useStateValue } from "../StateProvider";
-import Product from "./Product";
+import CheckoutProduct from "./CheckoutProduct";
 
 function Checkout() {
   const [{ basket }, dispatch] = useStateValue();
-  console.log(basket);
+
+  const modifiedBasket = basket.filter((item, idx, arr) => {
+    console.log("Item", item);
+    console.log("IDX", idx);
+    console.log("Arr", arr);
+    const found = arr.find((i) => i.id === item.id);
+    console.log("Found", found);
+    if (found) return false;
+    else return true;
+  });
+
+  console.log("modified ", modifiedBasket);
   return (
     <div className="checkout">
       <div className="checkout__left">
@@ -19,7 +30,8 @@ function Checkout() {
           <h2 className="checkout__title">Your Shopping Basket</h2>
           {basket.map((item) => {
             return (
-              <Product
+              <CheckoutProduct
+                key={item.id}
                 id={item.id}
                 title={item.title}
                 image={item.image}
