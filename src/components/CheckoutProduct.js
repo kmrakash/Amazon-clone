@@ -17,7 +17,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
       <img src={image} alt="" className="checkoutProduct__image" />
       <div className="checkoutProduct__info">
         <p className="checkoutProduct__title">{title}</p>
-        <p className="checkoutProduct__price">
+        <div className="checkoutProduct__price">
           <small> ₹ </small>
           <strong>{price}</strong>
           <div className="checkoutProduct__rating">
@@ -29,7 +29,7 @@ function CheckoutProduct({ id, image, title, price, rating }) {
                 </span>
               ))}
           </div>
-        </p>
+        </div>
         <button onClick={removeFromBasket}>Remove From Basket</button>
       </div>
     </div>
